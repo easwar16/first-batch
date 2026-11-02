@@ -14,8 +14,6 @@ const pillars = [
   { title: "A one-page reach report", body: "What your audience watched, so next month leans into it." },
 ];
 
-const reels = ["Jar opens on a kitchen counter", "Ingredients, one by one", "Morning ritual, 7 AM", "The first sip"];
-
 export default function Home() {
   return (
     <>
@@ -36,8 +34,9 @@ export default function Home() {
               <BookLink>Book a 15-minute call</BookLink>
               <a className="btn ghost" href="#how">See how it works</a>
             </div>
-            <div className="reels" aria-hidden="true">
-              {reels.map((r) => <div className="reel" key={r}><span>{r}</span></div>)}
+            <div className="hero-proof">
+              <b>48×</b>
+              <span>One AI reel I made reached 10,000 views on an account with 208 followers.</span>
             </div>
           </div>
           <LeadForm />
