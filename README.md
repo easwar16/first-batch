@@ -1,12 +1,16 @@
 # First Batch
 
 Landing page for First Batch: AI product reels for Indian food, beverage and wellness brands.
+Next.js (App Router), plain CSS in `app/globals.css`, leads stored in Convex.
 
-Next.js (App Router), no Tailwind. Styles in `app/globals.css`.
+## How leads work
+- `convex/` holds the lead backend: a `leads` table and an HTTP endpoint at `/submitLead`.
+- On Vercel, the build runs `npx convex deploy` when `CONVEX_DEPLOY_KEY` is set. That pushes the backend and sets `NEXT_PUBLIC_CONVEX_URL`, which the form uses to post leads.
+- Without the key, the site still builds and the form shows a confirmation but saves nothing.
 
-## Environment variables (Vercel)
-- `NEXT_PUBLIC_BOOKING_URL`: Cal.com or Calendly link. Without it, "Book a call" scrolls to the lead form.
-- `NEXT_PUBLIC_LEAD_ENDPOINT`: your own Convex `/submitLead` endpoint. Without it, the form shows a confirmation but saves nothing.
+## Vercel environment variables
+- `CONVEX_DEPLOY_KEY` (Production): from Convex dashboard > your project > Settings > Generate Production Deploy Key.
+- `NEXT_PUBLIC_BOOKING_URL` (optional): Cal.com or Calendly link.
 
-## Develop
-npm run dev
+## See your leads
+Convex dashboard > your project > Data > `leads`.
