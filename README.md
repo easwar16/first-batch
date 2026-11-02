@@ -1,6 +1,6 @@
-# Day One Studio
+# Scrollstop
 
-Landing page for Day One Studio: AI product reels for Indian food, beverage and wellness brands.
+Landing page for Scrollstop: AI product reels for Indian food, beverage and wellness brands.
 Next.js (App Router), plain CSS in `app/globals.css`, leads stored in Convex.
 
 ## How leads work

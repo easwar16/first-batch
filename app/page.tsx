@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <nav>
         <div className="wrap">
-          <a className="brand" href="#top"><i aria-hidden="true" />Day One Studio</a>
+          <a className="brand" href="#top"><i aria-hidden="true" />Scrollstop</a>
           <BookLink>Book a call</BookLink>
         </div>
       </nav>
@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="wrap"><span>Day One Studio, Easwar H, Chennai</span><span>AI product reels for D2C brands</span></div>
+        <div className="wrap"><span>Scrollstop, Easwar H, Chennai</span><span>AI product reels for D2C brands</span></div>
       </footer>
     </>
   );
