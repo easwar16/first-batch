@@ -5,7 +5,7 @@ import "./globals.css";
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700", "800"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "First Batch | AI product reels for D2C brands",
+  title: "Day One Studio | AI product reels for D2C brands",
   description: "12 AI product reels a month for Indian food, beverage and wellness brands, made from the photos you already have. First 3 ready in 7 days.",
 };
 

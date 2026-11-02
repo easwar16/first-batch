@@ -1,6 +1,6 @@
-# First Batch
+# Day One Studio
 
-Landing page for First Batch: AI product reels for Indian food, beverage and wellness brands.
+Landing page for Day One Studio: AI product reels for Indian food, beverage and wellness brands.
 Next.js (App Router), plain CSS in `app/globals.css`, leads stored in Convex.
 
 ## How leads work
