@@ -8,6 +8,12 @@ const steps = [
   { n: 3, title: "Repeat every month", body: "A new batch on a fixed calendar, shaped by what performed." },
 ];
 
+const outcomes = [
+  { title: "Reach people who don't follow you yet", body: "Every reel is a shot at the Explore feed. Small accounts break out on video, not on follower count." },
+  { title: "A feed that sells while you run the brand", body: "Your product shows up every few days, in your voice, without you filming at night." },
+  { title: "Know what your customers actually watch", body: "A monthly reach report shows which reels landed, so every batch gets sharper than the last." },
+];
+
 const pillars = [
   { title: "A voice that sounds like you", body: "Colours, hooks and caption style locked before the first reel." },
   { title: "A full batch of reels", body: "Your product in real scenes, ingredient stories, captions ready to post." },
@@ -77,19 +83,25 @@ export default function Home() {
 
       <section className="block proof">
         <div className="wrap">
-          <div>
-            <h2>One reel. 48 times the account&apos;s size.</h2>
-            <p>An AI reel I made for a pre-launch beverage brand reached 10,000 views on an account with 208 followers. Reach follows the video, not the follower count.</p>
-            <div className="facts">
-              <span className="tag">7 sites built for one consumer brand group</span>
-              <span className="tag">Live D2C store in English and Hindi</span>
-              <span className="tag">Every reel AI-made, no shoot</span>
-            </div>
+          <h2>Your follower count is not your ceiling.</h2>
+          <p className="proof-sub">Instagram shows a good reel to people who don&apos;t follow you yet. That&apos;s where your next customers are. Here&apos;s what 12 shots a month does for your brand.</p>
+          <div className="grid3 outcomes">
+            {outcomes.map((o) => (
+              <div className="outcome" key={o.title}>
+                <h3>{o.title}</h3>
+                <p>{o.body}</p>
+              </div>
+            ))}
           </div>
-          <div className="meter" role="img" aria-label="208 followers compared with 10,000 views">
-            <div className="bar small"><div className="label">Followers <b>208</b></div><div className="track"><div className="fill" /></div></div>
-            <div className="bar big"><div className="label">Views on one reel <b>10,000</b></div><div className="track"><div className="fill" /></div></div>
-            <p className="note">10,000 ÷ 208 = 48×. Same account. Brand kept private.</p>
+          <div className="proof-strip">
+            <div className="proof-num"><b>48×</b><span>reach on one reel</span></div>
+            <div className="proof-copy">
+              <p>The proof: an AI reel I made for a pre-launch beverage brand reached <b>10,000 views</b> on an account with <b>208 followers</b>. No shoot, no ad spend, just their product photos.</p>
+              <div className="meter" role="img" aria-label="208 followers compared with 10,000 views">
+                <div className="bar small"><div className="label">Followers <b>208</b></div><div className="track"><div className="fill" /></div></div>
+                <div className="bar big"><div className="label">Views <b>10,000</b></div><div className="track"><div className="fill" /></div></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

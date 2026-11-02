@@ -143,3 +143,20 @@ body,.btn,.field input,.field textarea{font-family: var(--font-sans), sans-serif
 .hero-proof b { font: 800 44px/1 var(--font-sans), sans-serif; color: #000; flex-shrink: 0; }
 .hero-proof span { font-size: 16px; font-weight: 500; line-height: 1.4; color: #000; }
 @media (max-width: 900px) { .hero-proof { margin-top: 28px; } }
+
+/* Proof section, brand-first */
+.proof .wrap { display: block; }
+.proof h2 { max-width: 20ch; margin-bottom: 16px; }
+.proof .proof-sub { color: #E5E5E5; font-size: 19px; max-width: 56ch; margin-bottom: 40px; }
+.outcomes { margin-bottom: 40px; }
+.outcome { background: #fff; color: #000; border: 2px solid #fff; padding: 28px; box-shadow: 6px 6px 0 #FFFF00; }
+.outcome h3 { font-size: 22px; line-height: 1.15; margin-bottom: 10px; color: #000; }
+.outcome p { color: #333; font-size: 16px; }
+.proof-strip { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: center; border: 2px solid #FFFF00; padding: 28px; }
+.proof-num { display: grid; gap: 4px; }
+.proof-num b { font: 800 72px/1 var(--font-sans), sans-serif; color: #FFFF00; }
+.proof-num span { color: #E5E5E5; font-size: 14px; font-weight: 500; }
+.proof-copy p { color: #E5E5E5; font-size: 17px; margin-bottom: 18px; max-width: none; }
+.proof-copy p b { color: #fff; }
+.proof-copy .meter { gap: 14px; }
+@media (max-width: 820px) { .proof-strip { grid-template-columns: 1fr; gap: 20px; padding: 20px; } .proof-num b { font-size: 56px; } }
