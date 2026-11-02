@@ -2,22 +2,34 @@ import BookLink from "@/components/BookLink";
 import LeadForm from "@/components/LeadForm";
 import MissedShots from "@/components/MissedShots";
 
-const steps = [
-  { n: 1, title: "Send your photos", body: "Product shots, your handle, three brands you admire." },
-  { n: 2, title: "Approve the batch", body: "Reels in your voice, ready in 7 days. Nothing posts without your yes." },
-  { n: 3, title: "Repeat every month", body: "A new batch on a fixed calendar, shaped by what performed." },
+const timeline = [
+  {
+    when: "Day 1",
+    title: "Kickoff",
+    you: "Send product photos, your Instagram handle and three brands you admire.",
+    youTime: "10 min",
+    us: "Lock your voice, colours and hooks so every reel sounds like your brand.",
+  },
+  {
+    when: "Day 7",
+    title: "First reels live",
+    you: "Approve your first 3 reels in one go. Nothing posts without your yes.",
+    youTime: "15 min",
+    us: "Your product in real scenes, ingredient stories and captions, ready to post.",
+  },
+  {
+    when: "Every month",
+    title: "12 new shots",
+    you: "Read a one-page report on what your audience actually watched.",
+    youTime: "5 min",
+    us: "Build the next 12 reels around what performed, so every batch hits harder.",
+  },
 ];
 
 const outcomes = [
   { title: "Reach people who don't follow you yet", body: "Every reel is a shot at the Explore feed. Small accounts break out on video, not on follower count." },
   { title: "A feed that sells while you run the brand", body: "Your product shows up every few days, in your voice, without you filming at night." },
   { title: "Know what your customers actually watch", body: "A monthly reach report shows which reels landed, so every batch gets sharper than the last." },
-];
-
-const pillars = [
-  { title: "A voice that sounds like you", body: "Colours, hooks and caption style locked before the first reel." },
-  { title: "A full batch of reels", body: "Your product in real scenes, ingredient stories, captions ready to post." },
-  { title: "A one-page reach report", body: "What your audience watched, so next month leans into it." },
 ];
 
 export default function Home() {
@@ -59,24 +71,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="block" id="how">
+      <section className="block how" id="how">
         <div className="wrap">
-          <h2>Three steps to your first batch.</h2>
-          <div className="grid3">
-            {steps.map((s) => (
-              <div className="card step" key={s.n}><div className="n">{s.n}</div><h3>{s.title}</h3><p>{s.body}</p></div>
-            ))}
+          <div className="how-head">
+            <h2>From product photos to posted reels in 7 days.</h2>
+            <p className="how-sub">You run the brand. I make the reels. Here&apos;s exactly what each of us does.</p>
           </div>
-        </div>
-      </section>
-
-      <section className="block what">
-        <div className="wrap">
-          <h2>12 shots, every month.</h2>
-          <div className="grid3">
-            {pillars.map((p) => (
-              <div className="card pillar" key={p.title}><h3>{p.title}</h3><p>{p.body}</p></div>
+          <ol className="timeline">
+            {timeline.map((t) => (
+              <li className="tl-step" key={t.when}>
+                <div className="tl-marker"><span>{t.when}</span></div>
+                <div className="tl-card">
+                  <h3>{t.title}</h3>
+                  <div className="tl-row tl-you">
+                    <span className="tl-who">You</span>
+                    <p>{t.you}</p>
+                    <span className="tl-time">{t.youTime}</span>
+                  </div>
+                  <div className="tl-row tl-us">
+                    <span className="tl-who">Me</span>
+                    <p>{t.us}</p>
+                  </div>
+                </div>
+              </li>
             ))}
+          </ol>
+          <div className="how-total">
+            <b>Your part: about 30 minutes a month.</b>
+            <span>No shoot, no filming at night, no agency briefs.</span>
           </div>
         </div>
       </section>
