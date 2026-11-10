@@ -17,10 +17,10 @@ export default function LeadForm() {
     setErr(false);
     if (!name || !/^\S+@\S+\.\S+$/.test(email)) {
       setErr(true);
-      setMsg("Add your name and a valid email to get your reel ideas.");
+      setMsg("Add your name and a valid email so I can send the demo.");
       return;
     }
-    const done = () => { setMsg("Sent. Your 3 reel ideas arrive within a day."); f.reset(); setBusy(false); };
+    const done = () => { setMsg("Sent. I'll email you the 60-second demo within a day."); f.reset(); setBusy(false); };
     if (!LEAD_ENDPOINT) { done(); return; }
     setBusy(true);
     try {
@@ -36,15 +36,15 @@ export default function LeadForm() {
 
   return (
     <form className="card lead" id="lead" noValidate onSubmit={onSubmit}>
-      <h2>Get 3 reel ideas for your product</h2>
-      <p className="hint">Tell me your brand. I&apos;ll reply within a day with three reel ideas built for it.</p>
+      <h2>Not ready for a call?</h2>
+      <p className="hint">Leave your details and I&apos;ll send a 60-second video of NightDesk booking a patient at 10:40 PM.</p>
       <div className="field"><label htmlFor="name">Your name</label><input id="name" name="name" autoComplete="name" required /></div>
       <div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" required /></div>
       <div className="field">
-        <label htmlFor="note">Brand or Instagram handle <span style={{ fontWeight: 400, color: "var(--muted)" }}>(optional)</span></label>
-        <textarea id="note" name="note" placeholder="@yourbrand" />
+        <label htmlFor="note">Clinic name and area <span className="opt">(optional)</span></label>
+        <textarea id="note" name="note" placeholder="e.g. Smile Care, Avadi" />
       </div>
-      <button className="btn sun" type="submit" disabled={busy}>Send me 3 reel ideas</button>
+      <button className="btn btn-lamp" type="submit" disabled={busy}>Send me the demo</button>
       <div className={err ? "msg err" : "msg"} role="status" aria-live="polite">{msg}</div>
     </form>
   );

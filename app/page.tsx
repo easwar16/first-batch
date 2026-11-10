@@ -1,146 +1,142 @@
 import BookLink from "@/components/BookLink";
 import LeadForm from "@/components/LeadForm";
-import MissedShots from "@/components/MissedShots";
+import ChatDemo from "@/components/ChatDemo";
 
-const timeline = [
+const steps = [
+  { when: "Day 1 to 2", title: "Set up", body: "One call to capture your services, timings, doctors and the questions patients ask most." },
+  { when: "Day 3 to 5", title: "Build", body: "I connect it to your clinic's WhatsApp and Google Calendar, in English, Tamil or Tanglish." },
+  { when: "Day 6 to 7", title: "Go live", body: "You test it, approve every answer, and switch it on." },
+];
+
+const pillars = [
   {
-    when: "Day 1",
-    title: "Kickoff",
-    you: "Send product photos, your Instagram handle and three brands you admire.",
-    youTime: "10 min",
-    us: "Lock your voice, colours and hooks so every reel sounds like your brand.",
+    title: "Every message answered",
+    body: "In under a minute, at 10 PM or on a Sunday. Timings, location, treatments, available slots.",
   },
   {
-    when: "Day 7",
-    title: "First reels live",
-    you: "Approve your first 3 reels in one go. Nothing posts without your yes.",
-    youTime: "15 min",
-    us: "Your product in real scenes, ingredient stories and captions, ready to post.",
+    title: "Bookings and reminders, handled",
+    body: "Slots go straight into your calendar. Patients get a reminder the day before, and a nudge if they miss.",
   },
   {
-    when: "Every month",
-    title: "12 new shots",
-    you: "Read a one-page report on what your audience actually watched.",
-    youTime: "5 min",
-    us: "Build the next 12 reels around what performed, so every batch hits harder.",
+    title: "Your staff stays in charge",
+    body: "Anything medical, urgent or unclear goes to your team. You approve every answer, and get a one-page report each month.",
   },
 ];
 
-const outcomes = [
-  { title: "Reach people who don't follow you yet", body: "Every reel is a shot at the Explore feed. Small accounts break out on video, not on follower count." },
-  { title: "A feed that sells while you run the brand", body: "Your product shows up every few days, in your voice, without you filming at night." },
-  { title: "Know what your customers actually watch", body: "A monthly reach report shows which reels landed, so every batch gets sharper than the last." },
+const proof = [
+  { n: "3 years", label: "building enterprise workflow software: forms, approvals and notifications that run without anyone chasing them." },
+  { n: "7 sites", label: "built and launched for one founder's consumer brands, including a live store in English and Hindi." },
+  { n: "1 builder", label: "sets it up, maintains it and picks up your call. No agency queue, and I live in Avadi." },
 ];
 
 export default function Home() {
   return (
     <>
-      <nav>
-        <div className="wrap">
-          <a className="brand" href="#top"><i aria-hidden="true" />Scrollstop</a>
-          <BookLink>Book a call</BookLink>
+      <nav className="nav">
+        <div className="wrap nav-row">
+          <a className="mark" href="#top">
+            <span className="lamp" aria-hidden="true" />
+            NightDesk
+          </a>
+          <BookLink className="btn btn-quiet">Book a call</BookLink>
         </div>
       </nav>
 
       <header className="hero" id="top">
-        <div className="wrap">
-          <div>
-            <span className="tag">For food, beverage and wellness brands</span>
-            <h1>144 shots a year at reach your followers can&apos;t buy.</h1>
-            <p className="sub">12 AI product reels a month, made from the photos you already have. Your first 3 are ready in 7 days.</p>
+        <div className="wrap hero-grid">
+          <div className="hero-copy">
+            <h1>Your front desk closes at 8. Your patients&apos; WhatsApp messages don&apos;t.</h1>
+            <p className="sub">
+              NightDesk is an AI assistant on your clinic&apos;s WhatsApp. It replies to every enquiry in under a minute, books
+              the slot into your calendar and sends the reminder. Anything medical goes to your staff.
+            </p>
             <div className="actions">
-              <BookLink>Book a 15-minute call</BookLink>
-              <a className="btn ghost" href="#how">See how it works</a>
-            </div>
-            <div className="hero-proof">
-              <b>48×</b>
-              <span>One AI reel I made reached 10,000 views on an account with 208 followers.</span>
+              <BookLink className="btn btn-lamp">Book a call</BookLink>
+              <span className="by">Built and run by Easwar, Avadi, Chennai</span>
             </div>
           </div>
-          <LeadForm />
+          <div className="hero-form">
+            <LeadForm />
+          </div>
+          <div className="hero-demo">
+            <ChatDemo />
+          </div>
         </div>
       </header>
 
-      <section className="block calc-band">
-        <div className="wrap calc">
-          <div>
-            <h2>Count your missed shots.</h2>
-            <p className="calc-sub">Every reel is a shot at reach beyond your follower count. Here&apos;s how many you&apos;re not taking.</p>
+      <section className="pain">
+        <div className="wrap">
+          <p className="pain-lead">I checked 29 dental clinics around Avadi, Ambattur, Mogappair and Anna Nagar on Google Maps.</p>
+          <div className="stat-row">
+            <div className="stat">
+              <b>22 of 29</b>
+              <span>close by 9 PM on weekdays.</span>
+            </div>
+            <div className="stat">
+              <b>7 of 29</b>
+              <span>are shut all of Sunday.</span>
+            </div>
           </div>
-          <MissedShots />
+          <p className="pain-close">After that, the messages keep coming. Whoever replies first gets the booking.</p>
         </div>
       </section>
 
-      <section className="block how" id="how">
+      <section className="section" id="how">
         <div className="wrap">
-          <div className="how-head">
-            <h2>From product photos to posted reels in 7 days.</h2>
-            <p className="how-sub">You run the brand. I make the reels. Here&apos;s exactly what each of us does.</p>
-          </div>
-          <ol className="timeline">
-            {timeline.map((t) => (
-              <li className="tl-step" key={t.when}>
-                <div className="tl-marker"><span>{t.when}</span></div>
-                <div className="tl-card">
-                  <h3>{t.title}</h3>
-                  <div className="tl-row tl-you">
-                    <span className="tl-who">You</span>
-                    <p>{t.you}</p>
-                    <span className="tl-time">{t.youTime}</span>
-                  </div>
-                  <div className="tl-row tl-us">
-                    <span className="tl-who">Me</span>
-                    <p>{t.us}</p>
-                  </div>
-                </div>
+          <h2>Live on your number in 7 days</h2>
+          <ol className="card-row">
+            {steps.map((s) => (
+              <li className="card step" key={s.title}>
+                <span className="tag">{s.when}</span>
+                <h3>{s.title}</h3>
+                <p>{s.body}</p>
               </li>
             ))}
           </ol>
-          <div className="how-total">
-            <b>Your part: about 30 minutes a month.</b>
-            <span>No shoot, no filming at night, no agency briefs.</span>
+        </div>
+      </section>
+
+      <section className="section section-tint">
+        <div className="wrap">
+          <h2>What your clinic gets</h2>
+          <div className="card-row">
+            {pillars.map((p) => (
+              <article className="card pillar" key={p.title}>
+                <h3>{p.title}</h3>
+                <p>{p.body}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="block proof">
+      <section className="proof">
         <div className="wrap">
-          <h2>Your follower count is not your ceiling.</h2>
-          <p className="proof-sub">Instagram shows a good reel to people who don&apos;t follow you yet. That&apos;s where your next customers are. Here&apos;s what 12 shots a month does for your brand.</p>
-          <div className="grid3 outcomes">
-            {outcomes.map((o) => (
-              <div className="outcome" key={o.title}>
-                <h3>{o.title}</h3>
-                <p>{o.body}</p>
+          <h2>Built by someone who makes software that runs on its own.</h2>
+          <div className="stat-row stat-row-3">
+            {proof.map((p) => (
+              <div className="stat stat-dark" key={p.n}>
+                <b>{p.n}</b>
+                <span>{p.label}</span>
               </div>
             ))}
           </div>
-          <div className="proof-strip">
-            <div className="proof-num"><b>48×</b><span>reach on one reel</span></div>
-            <div className="proof-copy">
-              <p>The proof: an AI reel I made for a pre-launch beverage brand reached <b>10,000 views</b> on an account with <b>208 followers</b>. No shoot, no ad spend, just their product photos.</p>
-              <div className="meter" role="img" aria-label="208 followers compared with 10,000 views">
-                <div className="bar small"><div className="label">Followers <b>208</b></div><div className="track"><div className="fill" /></div></div>
-                <div className="bar big"><div className="label">Views <b>10,000</b></div><div className="track"><div className="fill" /></div></div>
-              </div>
-            </div>
-          </div>
+          <p className="proof-note">No clinic results to show yet. Yours could be the first, on a 14-day pilot.</p>
         </div>
       </section>
 
-      <section className="block close">
-        <div className="wrap">
-          <h2>Small accounts don&apos;t have a reach problem. They have a shots problem.</h2>
-          <p>Fifteen minutes, evenings work. Or leave your details and get three reel ideas first.</p>
+      <section className="closing">
+        <div className="wrap closing-inner">
+          <h2>The next message arrives tonight.</h2>
           <div className="actions">
-            <BookLink>Book a 15-minute call</BookLink>
-            <a className="btn ghost" href="#lead">Get 3 reel ideas</a>
+            <BookLink className="btn btn-lamp">Book a call</BookLink>
+            <a className="text-link" href="#lead">Or leave your details</a>
           </div>
         </div>
       </section>
 
-      <footer>
-        <div className="wrap"><span>Scrollstop, Easwar H, Chennai</span><span>AI product reels for D2C brands</span></div>
+      <footer className="foot">
+        <div className="wrap">NightDesk, Avadi, Chennai. Built by Easwar.</div>
       </footer>
     </>
   );
