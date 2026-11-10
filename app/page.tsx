@@ -14,13 +14,23 @@ const pillars = [
     body: "In under a minute, at 10 PM or on a Sunday. Timings, location, treatments, available slots.",
   },
   {
-    title: "Bookings and reminders, handled",
-    body: "Slots go straight into your calendar. Patients get a reminder the day before, and a nudge if they miss.",
+    title: "Fewer empty chairs",
+    body: "Bookings land in your calendar, with reminders 48 hours and 2 hours before, so patients actually turn up.",
   },
   {
-    title: "Your staff stays in charge",
-    body: "Anything medical, urgent or unclear goes to your team. You approve every answer, and get a one-page report each month.",
+    title: "Patients who come back",
+    body: "Every patient is asked for a Google review, and recalled for their 6-month check-up. Unhappy replies reach you first.",
   },
+];
+
+const journey = [
+  { when: "Any time", what: "A patient messages your clinic on WhatsApp." },
+  { when: "Under a minute", what: "NightDesk replies with timings, location, treatments and open slots." },
+  { when: "Same chat", what: "The slot is booked into your calendar, with the right doctor." },
+  { when: "48 hours and 2 hours before", what: "Reminders go out, with directions and parking." },
+  { when: "After the visit", what: "Every patient is asked for a Google review. Anyone unhappy is flagged to you the same day." },
+  { when: "6 months later", what: "A check-up reminder, and the slot is booked if they say yes." },
+  { when: "Every Monday", what: "A short report on your WhatsApp: enquiries, bookings, no-shows, reviews, recalls." },
 ];
 
 const proof = [
@@ -48,7 +58,7 @@ export default function Home() {
             <h1>Your front desk closes at 8. Your patients&apos; WhatsApp messages don&apos;t.</h1>
             <p className="sub">
               NightDesk is an AI assistant on your clinic&apos;s WhatsApp. It replies to every enquiry in under a minute, books
-              the slot into your calendar and sends the reminder. Anything medical goes to your staff.
+              the slot and sends the reminders. After the visit, it asks for a review and brings patients back at 6 months.
             </p>
             <div className="actions">
               <BookLink className="btn btn-lamp">Book a call</BookLink>
@@ -78,6 +88,23 @@ export default function Home() {
             </div>
           </div>
           <p className="pain-close">After that, the messages keep coming. Whoever replies first gets the booking.</p>
+        </div>
+      </section>
+
+      <section className="section journey-section" id="journey">
+        <div className="wrap journey-grid">
+          <div className="journey-intro">
+            <h2>From the first message to the 6-month check-up</h2>
+            <p>Your desk runs the day. NightDesk runs everything between visits. Anything medical, urgent or unclear goes straight to your staff.</p>
+          </div>
+          <ol className="journey">
+            {journey.map((j) => (
+              <li key={j.when}>
+                <span className="journey-when">{j.when}</span>
+                <span className="journey-what">{j.what}</span>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 

@@ -169,6 +169,20 @@ a { color: inherit; }
   .bubble-typing i { animation: none; }
 }
 
+/* Patient journey */
+.journey-section { background: var(--white); border-bottom: 1px solid var(--line); }
+.journey-grid { display: grid; gap: 32px; }
+@media (min-width: 900px) { .journey-grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 64px; align-items: start; } .journey-intro { position: sticky; top: 32px; } }
+.journey-intro p { margin-top: 16px; color: var(--muted); max-width: 40ch; }
+.journey { list-style: none; margin: 0; padding: 0; position: relative; }
+.journey::before { content: ""; position: absolute; left: 7px; top: 10px; bottom: 10px; width: 2px; background: var(--line); }
+.journey li { position: relative; padding: 0 0 26px 36px; }
+.journey li:last-child { padding-bottom: 0; }
+.journey li::before { content: ""; position: absolute; left: 0; top: 5px; width: 16px; height: 16px; border-radius: 50%; background: var(--white); border: 3px solid var(--lamp); }
+.journey li:first-child::before { background: var(--lamp); box-shadow: 0 0 12px 2px rgba(244,183,64,0.45); }
+.journey-when { display: block; font-size: 14px; font-weight: 600; color: #7a5200; }
+.journey-what { display: block; margin-top: 2px; font-size: 18px; line-height: 1.45; max-width: 46ch; }
+
 /* Pain strip */
 .pain { padding: 64px 0; background: var(--white); border-bottom: 1px solid var(--line); }
 .pain-lead { font-size: 19px; font-weight: 500; max-width: 46ch; }

@@ -6,7 +6,7 @@ const onest = Onest({ subsets: ["latin"], weight: ["300", "400", "500", "600", "
 
 export const metadata: Metadata = {
   title: "NightDesk | WhatsApp front desk for Chennai clinics",
-  description: "An AI assistant on your clinic's WhatsApp that replies in under a minute, books the slot and sends the reminder. Live in 7 days.",
+  description: "An AI assistant on your clinic's WhatsApp that replies in under a minute, books the slot, sends reminders, asks for reviews and recalls patients at 6 months. Live in 7 days.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
