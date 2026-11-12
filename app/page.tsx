@@ -41,6 +41,7 @@ const proof = [
 
 const extras = [
   { title: "Google profile refresh", body: "Professional photos of your clinic, a rewritten profile, review replies and weekly posts, so patients pick you on Maps." },
+  { title: "Review stand + dashboard", body: "A tap-to-review stand at your reception, and one page that shows your rating, every new review and the ones still waiting for a reply." },
   { title: "Website rebuild", body: "A fast, mobile-first site with WhatsApp booking built in. For clinics whose site is down, slow or out of date." },
   { title: "New-patient campaigns", body: "Bring old patients back for check-ups, and turn ad enquiries into booked visits through the same WhatsApp desk." },
 ];
@@ -147,7 +148,7 @@ export default function Home() {
         <div className="wrap">
           <h2>Also from Keyline Studio</h2>
           <p className="extras-lead">Every clinic starts with one thing. These come when you need them.</p>
-          <div className="card-row">
+          <div className="card-row card-row-2">
             {extras.map((x) => (
               <article className="card" key={x.title}>
                 <h3>{x.title}</h3>

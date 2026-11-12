@@ -209,6 +209,7 @@ a { color: inherit; }
 .pillar h3 { margin-top: 0; }
 
 .extras-lead { margin-top: 12px; color: var(--muted); max-width: 52ch; }
+@media (min-width: 820px) { .card-row-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .card-row .card h3:first-child { margin-top: 0; }
 
 /* Proof */
