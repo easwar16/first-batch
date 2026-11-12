@@ -37,7 +37,7 @@ export default function LeadForm() {
   return (
     <form className="card lead" id="lead" noValidate onSubmit={onSubmit}>
       <h2>Not ready for a call?</h2>
-      <p className="hint">Leave your details and I&apos;ll send a 60-second video of NightDesk booking a patient at 10:40 PM.</p>
+      <p className="hint">Leave your details and I&apos;ll send a 60-second video of our WhatsApp desk booking a patient at 10:40 PM.</p>
       <div className="field"><label htmlFor="name">Your name</label><input id="name" name="name" autoComplete="name" required /></div>
       <div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" required /></div>
       <div className="field">

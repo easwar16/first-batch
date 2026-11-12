@@ -25,7 +25,7 @@ const pillars = [
 
 const journey = [
   { when: "Any time", what: "A patient messages your clinic on WhatsApp." },
-  { when: "Under a minute", what: "NightDesk replies with timings, location, treatments and open slots." },
+  { when: "Under a minute", what: "Our WhatsApp desk replies with timings, location, treatments and open slots." },
   { when: "Same chat", what: "The slot is booked into your calendar, with the right doctor." },
   { when: "48 hours and 2 hours before", what: "Reminders go out, with directions and parking." },
   { when: "After the visit", what: "Every patient is asked for a Google review. Anyone unhappy is flagged to you the same day." },
@@ -39,6 +39,12 @@ const proof = [
   { n: "1 builder", label: "sets it up, maintains it and picks up your call. No agency queue, and I live in Avadi." },
 ];
 
+const extras = [
+  { title: "Google profile refresh", body: "Professional photos of your clinic, a rewritten profile, review replies and weekly posts, so patients pick you on Maps." },
+  { title: "Website rebuild", body: "A fast, mobile-first site with WhatsApp booking built in. For clinics whose site is down, slow or out of date." },
+  { title: "New-patient campaigns", body: "Bring old patients back for check-ups, and turn ad enquiries into booked visits through the same WhatsApp desk." },
+];
+
 export default function Home() {
   return (
     <>
@@ -46,7 +52,7 @@ export default function Home() {
         <div className="wrap nav-row">
           <a className="mark" href="#top">
             <span className="lamp" aria-hidden="true" />
-            NightDesk
+            Keyline Studio
           </a>
           <BookLink className="btn btn-quiet">Book a call</BookLink>
         </div>
@@ -57,7 +63,7 @@ export default function Home() {
           <div className="hero-copy">
             <h1>Your front desk closes at 8. Your patients&apos; WhatsApp messages don&apos;t.</h1>
             <p className="sub">
-              NightDesk is an AI assistant on your clinic&apos;s WhatsApp. It replies to every enquiry in under a minute, books
+              Keyline Studio puts an AI front desk on your clinic&apos;s WhatsApp. It replies to every enquiry in under a minute, books
               the slot and sends the reminders. After the visit, it asks for a review and brings patients back at 6 months.
             </p>
             <div className="actions">
@@ -95,7 +101,7 @@ export default function Home() {
         <div className="wrap journey-grid">
           <div className="journey-intro">
             <h2>From the first message to the 6-month check-up</h2>
-            <p>Your desk runs the day. NightDesk runs everything between visits. Anything medical, urgent or unclear goes straight to your staff.</p>
+            <p>Your desk runs the day. Ours runs everything between visits. Anything medical, urgent or unclear goes straight to your staff.</p>
           </div>
           <ol className="journey">
             {journey.map((j) => (
@@ -137,6 +143,21 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="wrap">
+          <h2>Also from Keyline Studio</h2>
+          <p className="extras-lead">Every clinic starts with one thing. These come when you need them.</p>
+          <div className="card-row">
+            {extras.map((x) => (
+              <article className="card" key={x.title}>
+                <h3>{x.title}</h3>
+                <p>{x.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="proof">
         <div className="wrap">
           <h2>Built by someone who makes software that runs on its own.</h2>
@@ -163,7 +184,7 @@ export default function Home() {
       </section>
 
       <footer className="foot">
-        <div className="wrap">NightDesk, Avadi, Chennai. Built by Easwar.</div>
+        <div className="wrap">Keyline Studio, Chennai. Founded by Easwar.</div>
       </footer>
     </>
   );

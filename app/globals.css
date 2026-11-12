@@ -208,6 +208,9 @@ a { color: inherit; }
 .pillar { border-left: 4px solid var(--lamp); }
 .pillar h3 { margin-top: 0; }
 
+.extras-lead { margin-top: 12px; color: var(--muted); max-width: 52ch; }
+.card-row .card h3:first-child { margin-top: 0; }
+
 /* Proof */
 .proof { padding: 88px 0; background: var(--night); color: var(--white); }
 .proof .stat-row { margin-top: 40px; }
